@@ -15,8 +15,6 @@ sheet_url = 'https://docs.google.com/spreadsheets/d/1JDgPZDWubSUz7qHjYjfT0G0JwP9
 # def dataframe10():
 #     return pd.read_sql(f'SELECT * FROM "{sheet_url}" LIMIT 10', conn)
 
-# limit = st.sidebar.number_input("Məlumatların limiti", value=2000)
-
 st.write("This is not finished project yet. It has some bugs (when filter value is not in the table, for example).\n"
          " In the future it is thought to add machine learning prediction models (models are almost ready)."
          "Although some already can have find suitable homes with low price"
