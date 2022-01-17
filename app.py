@@ -25,7 +25,7 @@ st.write("This is not finished project yet. It has some bugs (when filter value 
 @st.cache(ttl=60*60*24)
 def dataframe():
     data = pd.read_sql(f'''SELECT ad_number,prices,categories,floors,areas_m2,rooms,credits,district,
-      ownerships,watches,ad_refreshed_date,date_of_parsing,agency_titles FROM "{sheet_url}" LIMIT 5000''', conn)
+      ownerships,watches,ad_refreshed_date,date_of_parsing,agency_titles FROM "{sheet_url}" ''', conn)
 
     data['prices'] = pd.to_numeric(
         data['prices'].apply(lambda x: str(x).replace(" ", ""))
