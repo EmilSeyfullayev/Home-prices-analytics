@@ -14,8 +14,9 @@ sheet_url = 'https://docs.google.com/spreadsheets/d/1JDgPZDWubSUz7qHjYjfT0G0JwP9
 # @st.cache()
 # def dataframe10():
 #     return pd.read_sql(f'SELECT * FROM "{sheet_url}" LIMIT 10', conn)
+#  It has some bugs (when filter value is not in the table, for example).\n"
 
-st.write("This is not finished project yet. It has some bugs (when filter value is not in the table, for example).\n"
+st.write("This is not finished project yet.
          " In the future it is thought to add machine learning prediction models (models are almost ready) instead of using simple averages according to filters."
          " Although some already can find suitable homes with low price (even for reselling)"
          )
@@ -123,7 +124,12 @@ def district(preprocessed_data = preprocessed_data):
 
 districts = district()
 
+
+
 district = st.sidebar.selectbox("Rayonlar", districts)
+
+preprocessed_data = preprocessed_data[preprocessed_data['district'] == district]
+
 watches = st.sidebar.slider("Baxışların sayı",value = [100, max(preprocessed_data['watches'])],
                             step=1, min_value=1, max_value=int(preprocessed_data['watches'].max()))
 rooms = st.sidebar.slider("Otaq sayı", step=1,
