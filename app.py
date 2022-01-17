@@ -17,7 +17,7 @@ sheet_url = 'https://docs.google.com/spreadsheets/d/1JDgPZDWubSUz7qHjYjfT0G0JwP9
 
 st.write("This is not finished project yet. It has some bugs (when filter value is not in the table, for example).\n"
          " In the future it is thought to add machine learning prediction models (models are almost ready) instead of using simple averages according to filters."
-         "Although some already can find suitable homes with low price (even for reselling)"
+         " Although some already can find suitable homes with low price (even for reselling)"
          )
 
 @st.cache(ttl=60*60*24)
