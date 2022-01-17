@@ -22,7 +22,7 @@ st.write("This is not finished project yet. It has some bugs (when filter value 
          "Although some can have find suitable homes with low price"
          "(models are almost ready) instead of using simple averages according to filters")
 
-@st.cache
+@st.cache(ttl=60*60*24)
 def dataframe():
     data = pd.read_sql(f'''SELECT ad_number,prices,categories,floors,areas_m2,rooms,credits,district,
       ownerships,watches,ad_refreshed_date,date_of_parsing,agency_titles FROM "{sheet_url}" LIMIT 5000''', conn)
