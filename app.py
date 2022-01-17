@@ -110,7 +110,7 @@ def dataframe():
     return data
 
 
-preprocessed_data = dataframe()
+preprocessed = dataframe()
 
 @st.cache
 def district(preprocessed_data = preprocessed_data):
@@ -128,7 +128,7 @@ districts = district()
 
 district = st.sidebar.selectbox("Rayonlar", districts)
 
-preprocessed_data = preprocessed_data[preprocessed_data['district'] == district]
+preprocessed_data = preprocessed[preprocessed['district'] == district]
 
 watches = st.sidebar.slider("Baxışların sayı",value = [100, max(preprocessed_data['watches'])],
                             step=1, min_value=1, max_value=int(preprocessed_data['watches'].max()))
