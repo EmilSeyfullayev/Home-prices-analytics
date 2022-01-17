@@ -16,7 +16,7 @@ sheet_url = 'https://docs.google.com/spreadsheets/d/1JDgPZDWubSUz7qHjYjfT0G0JwP9
 #     return pd.read_sql(f'SELECT * FROM "{sheet_url}" LIMIT 10', conn)
 #  It has some bugs (when filter value is not in the table, for example).\n"
 
-st.write("This is not finished project yet.
+st.write("This is not finished project yet."
          " In the future it is thought to add machine learning prediction models (models are almost ready) instead of using simple averages according to filters."
          " Although some already can find suitable homes with low price (even for reselling)"
          )
