@@ -113,7 +113,7 @@ def dataframe():
 preprocessed = dataframe()
 
 @st.cache
-def district(preprocessed_data = preprocessed_data):
+def district(preprocessed_data = preprocessed):
     districts = []
     districts_in_lists = list(preprocessed_data['district'].apply(lambda x: x.split("; ")))
     for i in districts_in_lists:
