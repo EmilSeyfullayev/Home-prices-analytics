@@ -42,6 +42,7 @@ def dataframe():
     data['buildings_floor'] = buildings_floor
 
     data['areas_m2'] = data['areas_m2'].apply(lambda x: round(float(x.rstrip(" m²"))))
+    data['areas_m2'] = data['areas_m2'].apply(lambda x: round(float(x.rstrip(" sot"))))
     data['rooms'] = pd.to_numeric(data['rooms'])
     data['watches'] = pd.to_numeric(data['watches'])
 
