@@ -20,7 +20,7 @@ st.write("This is not finished project yet. It has some bugs (when filter value 
          " Although some already can find suitable homes with low price (even for reselling)"
          )
 
-@st.cache(ttl=60*60*24)
+@st.cache#(ttl=60*60*24)
 def dataframe():
     data = pd.read_sql(f'''SELECT ad_number,prices,categories,floors,areas_m2,rooms,credits,district,
       ownerships,watches,ad_refreshed_date,date_of_parsing,agency_titles FROM "{sheet_url}" ''', conn)
