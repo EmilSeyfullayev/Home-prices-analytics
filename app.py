@@ -9,7 +9,7 @@ conn = connect()
 
 sheet_url = 'https://docs.google.com/spreadsheets/d/1JDgPZDWubSUz7qHjYjfT0G0JwP9DXjVzXYV5Y_8xckw/edit?usp=sharing'
 
-# sheet_url = st.secrets["public_gsheets_url"]
+# sheet_url = st.secrets["public_gsheets_url"] this was used if you want to hide db info
 
 # @st.cache()
 # def dataframe10():
